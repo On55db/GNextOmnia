@@ -68,3 +68,29 @@ Le système utilise une approche modulaire pour gérer différentes API graphiqu
 ### Options de configuration
 
 Dans **GNextOmnia**, cette fonctionnalité peut être activée ou désactivée via l'interface graphique. L'utilisateur n'a pas besoin de spécifier manuellement l'API graphique, car **GNextOmnia** la détecte automatiquement. Toutefois, l'utilisateur peut choisir d'activer ou de désactiver certaines options de **Frame Generation**.
+
+---
+
+# GNext Omnia - Latency Reducer
+
+##  Réduction de la Latence avec GNext Omnia
+Le **Latency Reducer** de GNext Omnia est conçu pour diminuer la latence entre les entrées utilisateur (clavier/souris) et l'affichage à l'écran. Cette fonctionnalité optimise la communication entre le CPU, le GPU et les périphériques d'entrée pour améliorer la réactivité des jeux. Elle est compatible avec les technologies de **Frame Generation** et **Upscaling**.
+
+##  Fonctionnement
+Le système de réduction de latence fonctionne en optimisant différents aspects de la pipeline de rendu et du traitement des entrées :
+
+1. **Optimisation du buffering CPU/GPU** : Réduction du buffering d'image pour un affichage plus réactif.
+2. **Input Polling Ultra-Rapide** : Fréquence d'interrogation des entrées augmentée pour une meilleure précision.
+3. **Synchronisation direct des entrées et du rendu** : Assure que les actions de l'utilisateur sont prises en compte à la frame la plus récente.
+4. **Adaptation à l'API Graphique** :
+   - **OpenGL** : Optimisation du swap buffer et des frames en attente.
+   - **Vulkan** : Utilisation avancée des synchronisations CPU-GPU.
+   - **DirectX (9, 10, 11, 12)** : Gestion des files de rendu pour minimiser la latence.
+
+##  Modes de Fonctionnement
+- **Ultra Low Latency 🔥** : Mode extrême pour un rendu sans file d'attente, idéal pour les jeux compétitifs.
+- **Balanced Mode ⚖** : Un compromis entre latence réduite et fluidité.
+- **Performance Mode 🎮** : Optimisation générale pour réduire la latence sans impacter la stabilité.
+
+##  Intégration avec GNext Omnia
+Le module de réduction de latence fonctionne de manière transparente avec les autres modules de GNext Omnia, notamment **Frame Generation** et **Upscaling**. Il garantit une synchronisation optimale pour maximiser la fluidité tout en conservant une faible latence.
