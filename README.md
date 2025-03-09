@@ -71,7 +71,7 @@ Dans **GNextOmnia**, cette fonctionnalité peut être activée ou désactivée v
 
 ---
 
-# GNext Omnia - Latency Reducer
+# GNextOmnia - Latency Reducer
 
 ##  Réduction de la Latence avec GNext Omnia
 Le **Latency Reducer** de GNext Omnia est conçu pour diminuer la latence entre les entrées utilisateur (clavier/souris) et l'affichage à l'écran. Cette fonctionnalité optimise la communication entre le CPU, le GPU et les périphériques d'entrée pour améliorer la réactivité des jeux. Elle est compatible avec les technologies de **Frame Generation** et **Upscaling**.
